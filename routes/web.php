@@ -16,6 +16,6 @@ Route::get('/create', 'LetterController@create');
 Route::get('/letters/{letter}', 'LetterController@show');
 Route::post('/{letter}', 'LetterController@store');
 Route::get('/contacts/create', 'ContactController@create');
-Route::post ('/contacts/create', 'ContactController@store');
-
-
+Route::post('/contacts/create', 'ContactController@store');
+Route::get('/upload', 'FileUploadController@index');
+Route::post('/upload', 'FileUploadController@store');

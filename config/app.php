@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    'fileDestinationPath' => 'uploads',
     /*
     |--------------------------------------------------------------------------
     | Application Name
