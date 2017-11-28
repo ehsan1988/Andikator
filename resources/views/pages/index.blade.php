@@ -10,9 +10,10 @@
             <th>attachment</th>
         </tr>
         @foreach ($letters as $letter)
+
             <tr>
                 <td>{{$letter->id}}</td>
-                <td>{{$letter->title}}</td>
+                <td><a href="/letters/{{$letter->id}}">{{$letter->title}}</a></td>
                 @if($letter->type==0)
                     <td>send</td>
                 @else
@@ -22,6 +23,7 @@
                 <td>{{$letter->created_at}}</td>
                 <td>{{(($letter->created_at->year)%100).$letter->id }}</td>
             </tr>
+
         @endforeach
     </table>
 @endsection

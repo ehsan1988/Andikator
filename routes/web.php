@@ -13,7 +13,7 @@
 
 Route::get('/', 'LetterController@index');
 Route::get('/create', 'LetterController@create');
-Route::get('/{letter}', 'LetterController@show');
+Route::get('/letters/{letter}', 'LetterController@show');
 Route::post('/{letter}', 'LetterController@store');
 Route::get('/contacts/create', 'ContactController@create');
 Route::post ('/contacts/create', 'ContactController@store');

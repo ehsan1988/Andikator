@@ -1,4 +1,4 @@
 @extends('layouts.master')
 @section('content')
-    <h2>one post</h2>
+    <h2 class="text-center">{{$letter->title}}</h2>
 @endsection
