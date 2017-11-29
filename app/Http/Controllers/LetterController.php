@@ -13,10 +13,9 @@ class LetterController extends Controller
 
     }
 
-    public function show(Letter $letter)
+    public function show()
     {
-
-        return view('pages.single', compact('letter'));
+        return view('pages.single');
     }
 
     public function create()
