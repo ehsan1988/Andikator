@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateYearsTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateYearsTable extends Migration
      */
     public function up()
     {
-        Schema::create('years', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('isYear');
-            $table->integer('mail_enter');
-            $table->integer('mail_out');
+            $table->string('title');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('email')->unique();
+            $table->string('user');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateYearsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('years');
+        Schema::dropIfExists('contacts');
     }
 }

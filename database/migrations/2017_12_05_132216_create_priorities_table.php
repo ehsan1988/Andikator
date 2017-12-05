@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAttachmentsTable extends Migration
+class CreatePrioritiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateAttachmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('attachments', function (Blueprint $table) {
+        Schema::create('priorities', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('letter_id')->unsigned();
-            $table->foreign('letter_id')->references('id')->on('letters');
-            $table->integer('sequence');
-            $table->string('content');
+            $table->string('title');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateAttachmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attachments');
+        Schema::dropIfExists('priorities');
     }
 }

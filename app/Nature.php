@@ -3,10 +3,10 @@
 namespace App;
 
 
-class Attachment extends Model
+class Nature extends Model
 {
     public function letters()
     {
         return $this->hasMany(Letter::class);
-    }    //
+    }    //    //
 }
